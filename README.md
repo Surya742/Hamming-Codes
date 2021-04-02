@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="40" height="40" />)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
