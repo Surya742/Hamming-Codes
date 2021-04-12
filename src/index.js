@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HammingCodes from './components/HammingCodes';
+import LandingPage from './components/LandingPage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HammingCodes />
+    <LandingPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

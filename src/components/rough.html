@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/2.1.0/joint.css" />
+</head>
+<body>
+    <!-- content -->
+    <div id="myholder"></div>
+
+    <!-- dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/2.1.0/joint.js"></script>
+
+    <!-- code -->
+    <script type="text/javascript">
+
+        var graph = new joint.dia.Graph;
+
+        var paper = new joint.dia.Paper({
+            el: document.getElementById('myholder'),
+            model: graph,
+            width: 6000,
+            height: 1000,
+            gridSize: 1
+        });
+
+        var rect = new joint.shapes.standard.Rectangle();
+        rect.position(100, 30);
+        rect.resize(100, 40);
+        rect.attr({
+            body: {
+                fill: 'blue'
+            },
+            label: {
+                text: 'Hello',
+                fill: 'white'
+            }
+        });
+        rect.addTo(graph);
+
+        var rect2 = rect.clone();
+        rect2.translate(600, 0);
+        rect2.attr('label/text', 'World!');
+        rect2.addTo(graph);
+
+        var rect3 = rect.clone();
+        rect3.translate(900, 0);
+        rect3.attr('label/text', 'Bye!');
+        rect3.addTo(graph);
+
+        var rect4 = rect.clone();
+        rect4.translate(300, 0);
+        rect4.attr('label/text', 'Hell!');
+        rect4.addTo(graph);
+
+        var link = new joint.shapes.standard.Link();
+        link.source(rect);
+        link.target(rect2);
+        link.addTo(graph);
+
+        var link2 = new joint.shapes.standard.Link();
+        link2.source(rect);
+        link2.target(rect3);
+        link2.addTo(graph);
+
+        var link3 = new joint.shapes.standard.Link();
+        link3.source(rect);
+        link3.target(rect4);
+        link3.addTo(graph);
+
+    </script>
+</body>
+</html>
