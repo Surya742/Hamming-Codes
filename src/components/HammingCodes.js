@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submitBtn: {
     width: "12rem",
-    marginBottom: "10%",
+    marginBottom: "5%",
   }
 }));
 
@@ -79,7 +79,9 @@ var processed_data = {"0000" : 0 };//initialising object where transmitted data 
 
 export default function HammingCodes(props) {
   const classes = useStyles();
+
   const [inputData, setInputData] = useState("");
+
   const [block0000, setblock0000] = useState("");
   const [block0001, setblock0001] = useState("");
   const [block0010, setblock0010] = useState("");
@@ -96,9 +98,9 @@ export default function HammingCodes(props) {
   const [block1101, setblock1101] = useState("");
   const [block1110, setblock1110] = useState("");
   const [block1111, setblock1111] = useState("");
+
   const [result, setResult] = useState("");
 
-  const [backColor, setBackColor] = useState("");
   const [backColor0000, setBackColor0000] = useState("");
   const [backColor0001, setBackColor0001] = useState("");
   const [backColor0010, setBackColor0010] = useState("");
@@ -116,9 +118,57 @@ export default function HammingCodes(props) {
   const [backColor1110, setBackColor1110] = useState("");
   const [backColor1111, setBackColor1111] = useState("");
 
+  const [visiblity1, setVisiblity1] = useState("none");
+  const [visiblity2, setVisiblity2] = useState("none");
+  const[textdata, setTextData] = useState("");//FOR TEXT TO BINARY
+  const [binary, setBinary] = useState("")
 
 
-  function onSubmit(e){
+  function fillText(e){
+    setTextData(e.target.value);
+    console.log("data: ", textdata)
+  }
+
+const convertStringToBinary = (str) => str.split("").map(l => "0"+l.charCodeAt(0).toString(2)).join("");
+
+function emptyState(){
+  setblock0000("");
+  setblock0001("");
+  setblock0010("");
+  setblock0011("");
+  setblock0100("");
+  setblock0101("");
+  setblock0110("");
+  setblock0111("");
+  setblock1000("");
+  setblock1001("");
+  setblock1010("");
+  setblock1011("");
+  setblock1100("");
+  setblock1101("");
+  setblock1110("");
+  setblock1111("");
+
+  setBackColor0000("");
+  setBackColor0001("");
+  setBackColor0010("");
+  setBackColor0011("");
+  setBackColor0100("");
+  setBackColor0101("");
+  setBackColor0110("");
+  setBackColor0111("");
+  setBackColor1000("");
+  setBackColor1001("");
+  setBackColor1010("");
+  setBackColor1011("");
+  setBackColor1100("");
+  setBackColor1101("");
+  setBackColor1110("");
+  setBackColor1111("");
+  setResult("");
+}
+
+function onSubmit(e){
     e.preventDefault();
     data = inputData.split(""); //spliting 11 bit data to push in array_data
     data.map((item, i) => {
@@ -416,6 +466,7 @@ console.log("data1",data)
 
   function onChange(e){
     setInputData(e.target.value);
+    console.log("Value set : ", inputData)
   }
 
   function onDataChange(e){
@@ -483,9 +534,14 @@ console.log("data1",data)
       <ElevationScroll {...props}>
         <MenuAppBar style={{position: "sticky"}} />
       </ElevationScroll>
+
     <div className={classes.bodyy}>
       <h1 className={classes.heading}>ENTER DATA</h1>
-      <form onSubmit={onSubmit} noValidate autoComplete="off">
+      <Button style={{margin: "2ch"}} onClick={() => {setVisiblity2("none");setVisiblity1("");emptyState()}} variant="contained" color="primary"> ENTER RAW DATA </Button>
+      <Button variant="contained" onClick={() => {setVisiblity1("none");setVisiblity2("");emptyState()}} color="primary"> ENTER TEXT  </Button>
+
+      {/* form 1 */}
+      <form style={{display: `${visiblity1}`}} onSubmit={onSubmit} noValidate autoComplete="off">
       <TextField
           className={classes.mainInput}
           id="outlined-number"
@@ -499,14 +555,45 @@ console.log("data1",data)
           onChange={onChange}
           value={inputData}
         />
-
       <br></br>
-
-
       <Button className={classes.submitBtn} variant="outlined" type="submit" color="primary">
         PROCESS DATA
       </Button>
       </form>
+
+      {/* form 2 */}
+      <form style={{display: `${visiblity2}`}} onSubmit={onSubmit} noValidate autoComplete="off">
+      <TextField
+          className={classes.mainInput}
+          id="filled-basic" 
+          label="Enter Text" 
+          variant="filled"
+          // name="mainInput"
+          onChange={fillText}
+          value={textdata}
+        />
+        <Button onClick={() => {setInputData(convertStringToBinary(textdata)); setTextData("")}} style={{width: "18ch", display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "2ch"}} variant="outlined" color="primary">
+        ENCODE
+        </Button>
+      <TextField
+          className={classes.mainInput}
+          id="outlined-number"
+          label="Binary Equivalent"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          name="mainInput"
+          onChange={onChange}
+          value={inputData}
+        />
+      <br></br>
+      <Button className={classes.submitBtn} variant="outlined" type="submit" color="primary">
+        PROCESS DATA
+      </Button>
+      </form>
+
       <h1>PROCESSED DATA</h1>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField style={{backgroundColor: backColor0000 ? "#fc033d" : "#03adfc"}} id="filled-basic" label="0000" variant="filled" value={block0000} />
@@ -561,7 +648,7 @@ console.log("data1",data)
         DETECT
       </Button>
       </form>
-      <p style={{position: "relative", bottom: "7em"}}>{result}</p>
+      <p>{result}</p>
     </div>
     <AppBar style={{position: "absolute", top: "200%"}} />
     </div>

@@ -4,14 +4,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,10 +27,6 @@ export default function MenuAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
-
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -45,17 +37,8 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      {/* <FormGroup>
-        <FormControlLabel
-          control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
-          label={auth ? 'Logout' : 'Login'}
-        />
-      </FormGroup> */}
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton> */}
           <Typography variant="h6" className={classes.title}>
           <a style={{textDecoration: "none" , color: "white"}} href="/">HAMMING CODES</a>
           </Typography>
@@ -89,7 +72,6 @@ export default function MenuAppBar() {
                 <a href="/" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Home</MenuItem></a>
                 <a href="/simulator" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Simulator</MenuItem></a>
                 <a href="/imagePlay" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Image</MenuItem></a>
-                <a href="/textPlay" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Text</MenuItem></a>
                 </Router>
               </Menu>
             </div>

@@ -1,16 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import HammingCodesNavbar from './HammingCodesNavbar';
-import { makeStyles } from '@material-ui/core/styles';
 import imgs from "./img.png"
-
-const useStyles = makeStyles((theme) => ({
-    button: {
-      margin: theme.spacing(1),
-    },
-    center: {
-        textAlign: "center"
-    }
-  }));
 
   function imgToBase64(img) {
     const canvas = document.createElement('canvas');
