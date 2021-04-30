@@ -98,6 +98,7 @@ export default function Simulator(){
         <div className={classes.center}>
         <h1>Simulator</h1>
         <h3>For the circuit implementation of hamming codes, please download this file and upload it in "Load" option provides below in simulator.</h3>
+        <h3>Then use the "Move" option to see the whole circuit</h3>
                 <Button
                 variant="contained"
                 color="primary"

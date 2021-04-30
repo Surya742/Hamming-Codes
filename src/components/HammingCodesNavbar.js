@@ -86,8 +86,10 @@ export default function MenuAppBar() {
                 onClose={handleClose}
               >
                 <Router>
-                <Link to="/" ><MenuItem onClick={handleClose}>Home</MenuItem></Link>
-                <Link to="/simulator" ><MenuItem onClick={handleClose}>Simulator</MenuItem></Link>
+                <a href="/" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Home</MenuItem></a>
+                <a href="/simulator" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Simulator</MenuItem></a>
+                <a href="/imagePlay" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Image</MenuItem></a>
+                <a href="/textPlay" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Text</MenuItem></a>
                 </Router>
               </Menu>
             </div>
