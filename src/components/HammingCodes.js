@@ -320,7 +320,7 @@ console.log("data1",data)
       console.log(processed_data)
       if(err_bit_pos !== "0000"){
           if(temp_no_error){
-              setResult("Double Error Detected!!");
+              setResult("DOUBLE ERROR DETECTED!!");
               setBackColor0000("");
               setBackColor0001("");
               setBackColor0010("");
@@ -338,7 +338,7 @@ console.log("data1",data)
               setBackColor1110("");
               setBackColor1111("");
           }else{
-              setResult(`Error has found at position : ${err_bit_pos}`);
+              setResult(`ERROR HAS FOUND AT POSITION : ${err_bit_pos}`);
               switch (err_bit_pos){
                 case "0000":
                   setBackColor0000("#fc033d");
@@ -394,7 +394,7 @@ console.log("data1",data)
               }
           }
       }else{
-          setResult("No Error Detected!!");
+          setResult("NO ERROR DETECTED!!");
           setBackColor0000("");
           setBackColor0001("");
           setBackColor0010("");
@@ -484,7 +484,7 @@ console.log("data1",data)
         <MenuAppBar style={{position: "sticky"}} />
       </ElevationScroll>
     <div className={classes.bodyy}>
-      <h1 className={classes.heading}>Enter Data</h1>
+      <h1 className={classes.heading}>ENTER DATA</h1>
       <form onSubmit={onSubmit} noValidate autoComplete="off">
       <TextField
           className={classes.mainInput}
@@ -504,10 +504,10 @@ console.log("data1",data)
 
 
       <Button className={classes.submitBtn} variant="outlined" type="submit" color="primary">
-        Process Data
+        PROCESS DATA
       </Button>
       </form>
-      <h1>Processed Data</h1>
+      <h1>PROCESSED DATA</h1>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField style={{backgroundColor: backColor0000 ? "#fc033d" : "#03adfc"}} id="filled-basic" label="0000" variant="filled" value={block0000} />
         <TextField style={{backgroundColor: backColor0001 ? "#fc033d" : "#03fca5"}} id="filled-basic" label="0001" variant="filled" value={block0001}/>
@@ -533,8 +533,8 @@ console.log("data1",data)
 
     {/* 2nd Part */}
     <div className={classes.bodyy2}>
-      <h1 className={classes.heading}>Error Detection</h1>
-      <h3 className={classes.heading2}>Alterable Data</h3>
+      <h1 className={classes.heading}>ERROR DETECTION</h1>
+      <h3 className={classes.heading2}>ALTERABLE DATA</h3>
       <form onSubmit={onErrorSubmit} className={classes.root} noValidate autoComplete="off">
         <TextField style={{backgroundColor: backColor0000 ? "#fc033d" : "#03adfc"}} onChange={onDataChange} name="0000" id="filled-basic" label="0000" variant="filled" value={block0000} />
         <TextField style={{backgroundColor: backColor0001 ? "#fc033d" : "#03fca5"}} onChange={onDataChange} name="0001" id="filled-basic" label="0001" variant="filled" value={block0001}/>
@@ -558,7 +558,7 @@ console.log("data1",data)
         <br></br>
         <br></br>
       <Button className={classes.submitBtn} variant="outlined" type="submit" color="primary">
-        Detect
+        DETECT
       </Button>
       </form>
       <p style={{position: "relative", bottom: "7em"}}>{result}</p>
