@@ -57,7 +57,7 @@ export default function MenuAppBar() {
             <MenuIcon />
           </IconButton> */}
           <Typography variant="h6" className={classes.title}>
-            HAMMING CODES
+          <a style={{textDecoration: "none" , color: "white"}} href="/">HAMMING CODES</a>
           </Typography>
           {auth && (
             <div>

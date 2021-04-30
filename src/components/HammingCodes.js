@@ -98,6 +98,24 @@ export default function HammingCodes(props) {
   const [block1111, setblock1111] = useState("");
   const [result, setResult] = useState("");
 
+  const [backColor, setBackColor] = useState("");
+  const [backColor0000, setBackColor0000] = useState("");
+  const [backColor0001, setBackColor0001] = useState("");
+  const [backColor0010, setBackColor0010] = useState("");
+  const [backColor0011, setBackColor0011] = useState("");
+  const [backColor0100, setBackColor0100] = useState("");
+  const [backColor0101, setBackColor0101] = useState("");
+  const [backColor0110, setBackColor0110] = useState("");
+  const [backColor0111, setBackColor0111] = useState("");
+  const [backColor1000, setBackColor1000] = useState("");
+  const [backColor1001, setBackColor1001] = useState("");
+  const [backColor1010, setBackColor1010] = useState("");
+  const [backColor1011, setBackColor1011] = useState("");
+  const [backColor1100, setBackColor1100] = useState("");
+  const [backColor1101, setBackColor1101] = useState("");
+  const [backColor1110, setBackColor1110] = useState("");
+  const [backColor1111, setBackColor1111] = useState("");
+
 
 
   function onSubmit(e){
@@ -302,15 +320,97 @@ console.log("data1",data)
       console.log(processed_data)
       if(err_bit_pos !== "0000"){
           if(temp_no_error){
-              console.log("Double Error Detected!!");
               setResult("Double Error Detected!!");
+              setBackColor0000("");
+              setBackColor0001("");
+              setBackColor0010("");
+              setBackColor0011("");
+              setBackColor0100("");
+              setBackColor0101("");
+              setBackColor0110("");
+              setBackColor0111("");
+              setBackColor1000("");
+              setBackColor1001("");
+              setBackColor1010("");
+              setBackColor1011("");
+              setBackColor1100("");
+              setBackColor1101("");
+              setBackColor1110("");
+              setBackColor1111("");
           }else{
-              console.log("Error has found at position : ", err_bit_pos);
               setResult(`Error has found at position : ${err_bit_pos}`);
+              switch (err_bit_pos){
+                case "0000":
+                  setBackColor0000("red");
+                  break;
+                case "0001":
+                  setBackColor0001("red");
+                  break;
+                case "0010":
+                  setBackColor0010("red");
+                  break;
+                case "0011":
+                  setBackColor0011("red");
+                  break;
+                case "0100":
+                  setBackColor0100("red");
+                  break;
+                case "0101":
+                  setBackColor0101("red");
+                  break;
+                case "0110":
+                  setBackColor0110("red");
+                  break;
+                case "0111":
+                  setBackColor0111("red");
+                  break;
+                case "1000":
+                  setBackColor1000("red");
+                  break;
+                case "1001":
+                  setBackColor1001("red");
+                  break;
+                case "1010":
+                  setBackColor1010("red");
+                  break;
+                case "1011":
+                  setBackColor1011("red");
+                  break;
+                case "1100":
+                  setBackColor1100("red");
+                  break;
+                case "1101":
+                  setBackColor1101("red");
+                  break;
+                case "1110":
+                  setBackColor1110("red");
+                  break;
+                case "1111":
+                  setBackColor1111("red");
+                  break;
+                default:
+                  console.log("Error in setting color: ",err_bit_pos);
+                  
+              }
           }
       }else{
-          console.log("No Error detected");
           setResult("No Error Detected!!");
+          setBackColor0000("");
+          setBackColor0001("");
+          setBackColor0010("");
+          setBackColor0011("");
+          setBackColor0100("");
+          setBackColor0101("");
+          setBackColor0110("");
+          setBackColor0111("");
+          setBackColor1000("");
+          setBackColor1001("");
+          setBackColor1010("");
+          setBackColor1011("");
+          setBackColor1100("");
+          setBackColor1101("");
+          setBackColor1110("");
+          setBackColor1111("");
       }
   }
 
@@ -436,25 +536,25 @@ console.log("data1",data)
       <h1 className={classes.heading}>Error Detection</h1>
       <h3 className={classes.heading2}>Alterable Data</h3>
       <form onSubmit={onErrorSubmit} className={classes.root} noValidate autoComplete="off">
-        <TextField onChange={onDataChange} name="0000" id="filled-basic" label="0000" variant="filled" value={block0000} />
-        <TextField onChange={onDataChange} name="0001" id="filled-basic" label="0001" variant="filled" value={block0001}/>
-        <TextField onChange={onDataChange} name="0010" id="filled-basic" label="0010" variant="filled" value={block0010}/>
-        <TextField onChange={onDataChange} name="0011" id="filled-basic" label="0011" variant="filled" value={block0011}/>
+        <TextField style={{backgroundColor: `${backColor0000}`}} onChange={onDataChange} name="0000" id="filled-basic" label="0000" variant="filled" value={block0000} />
+        <TextField style={{backgroundColor: `${backColor0001}`}} onChange={onDataChange} name="0001" id="filled-basic" label="0001" variant="filled" value={block0001}/>
+        <TextField style={{backgroundColor: `${backColor0010}`}} onChange={onDataChange} name="0010" id="filled-basic" label="0010" variant="filled" value={block0010}/>
+        <TextField style={{backgroundColor: `${backColor0011}`}} onChange={onDataChange} name="0011" id="filled-basic" label="0011" variant="filled" value={block0011}/>
         <br></br>
-        <TextField onChange={onDataChange} name="0100" id="filled-basic" label="0100" variant="filled" value={block0100} />
-        <TextField onChange={onDataChange} name="0101" id="filled-basic" label="0101" variant="filled" value={block0101}/>
-        <TextField onChange={onDataChange} name="0110" id="filled-basic" label="0110" variant="filled" value={block0110}/>
-        <TextField onChange={onDataChange} name="0111" id="filled-basic" label="0111" variant="filled" value={block0111}/>
+        <TextField style={{backgroundColor: `${backColor0100}`}} onChange={onDataChange} name="0100" id="filled-basic" label="0100" variant="filled" value={block0100} />
+        <TextField style={{backgroundColor: `${backColor0101}`}} onChange={onDataChange} name="0101" id="filled-basic" label="0101" variant="filled" value={block0101}/>
+        <TextField style={{backgroundColor: `${backColor0110}`}} onChange={onDataChange} name="0110" id="filled-basic" label="0110" variant="filled" value={block0110}/>
+        <TextField style={{backgroundColor: `${backColor0111}`}}onChange={onDataChange} name="0111" id="filled-basic" label="0111" variant="filled" value={block0111}/>
         <br></br>
-        <TextField onChange={onDataChange} name="1000" id="filled-basic" label="1000" variant="filled" value={block1000} />
-        <TextField onChange={onDataChange} name="1001" id="filled-basic" label="1001" variant="filled" value={block1001}/>
-        <TextField onChange={onDataChange} name="1010" id="filled-basic" label="1010" variant="filled" value={block1010}/>
-        <TextField onChange={onDataChange} name="1011" id="filled-basic" label="1011" variant="filled" value={block1011}/>
+        <TextField style={{backgroundColor: `${backColor1000}`}} onChange={onDataChange} name="1000" id="filled-basic" label="1000" variant="filled" value={block1000} />
+        <TextField style={{backgroundColor: `${backColor1001}`}} onChange={onDataChange} name="1001" id="filled-basic" label="1001" variant="filled" value={block1001}/>
+        <TextField style={{backgroundColor: `${backColor1010}`}} onChange={onDataChange} name="1010" id="filled-basic" label="1010" variant="filled" value={block1010}/>
+        <TextField style={{backgroundColor: `${backColor1011}`}} onChange={onDataChange} name="1011" id="filled-basic" label="1011" variant="filled" value={block1011}/>
         <br></br>
-        <TextField onChange={onDataChange} name="1100" id="filled-basic" label="1100" variant="filled" value={block1100} />
-        <TextField onChange={onDataChange} name="1101" id="filled-basic" label="1101" variant="filled" value={block1101}/>
-        <TextField onChange={onDataChange} name="1110" id="filled-basic" label="1110" variant="filled" value={block1110}/>
-        <TextField onChange={onDataChange} name="1111" id="filled-basic" label="1111" variant="filled" value={block1111}/>
+        <TextField style={{backgroundColor: `${backColor1100}`}} onChange={onDataChange} name="1100" id="filled-basic" label="1100" variant="filled" value={block1100} />
+        <TextField style={{backgroundColor: `${backColor1101}`}}onChange={onDataChange} name="1101" id="filled-basic" label="1101" variant="filled" value={block1101}/>
+        <TextField style={{backgroundColor: `${backColor1110}`}} onChange={onDataChange} name="1110" id="filled-basic" label="1110" variant="filled" value={block1110}/>
+        <TextField style={{backgroundColor: `${backColor1111}`}} onChange={onDataChange} name="1111" id="filled-basic" label="1111" variant="filled" value={block1111}/>
         <br></br>
         <br></br>
       <Button className={classes.submitBtn} variant="outlined" type="submit" color="primary">
