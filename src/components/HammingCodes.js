@@ -509,25 +509,25 @@ console.log("data1",data)
       </form>
       <h1>Processed Data</h1>
       <form className={classes.root} noValidate autoComplete="off">
-        <TextField id="filled-basic" label="0000" variant="filled" value={block0000} />
-        <TextField id="filled-basic" label="0001" variant="filled" value={block0001}/>
-        <TextField id="filled-basic" label="0010" variant="filled" value={block0010}/>
-        <TextField id="filled-basic" label="0011" variant="filled" value={block0011}/>
+        <TextField style={{backgroundColor: backColor0000 ? "#fc033d" : "#03adfc"}} id="filled-basic" label="0000" variant="filled" value={block0000} />
+        <TextField style={{backgroundColor: backColor0001 ? "#fc033d" : "#03fca5"}} id="filled-basic" label="0001" variant="filled" value={block0001}/>
+        <TextField style={{backgroundColor: backColor0010 ? "#fc033d" : "#03fca5"}} id="filled-basic" label="0010" variant="filled" value={block0010}/>
+        <TextField style={{backgroundColor: `${backColor0011}`}} id="filled-basic" label="0011" variant="filled" value={block0011}/>
         <br></br>
-        <TextField id="filled-basic" label="0100" variant="filled" value={block0100} />
-        <TextField id="filled-basic" label="0101" variant="filled" value={block0101}/>
-        <TextField id="filled-basic" label="0110" variant="filled" value={block0110}/>
-        <TextField id="filled-basic" label="0111" variant="filled" value={block0111}/>
+        <TextField style={{backgroundColor: backColor0100 ? "#fc033d" : "#03fca5"}} id="filled-basic" label="0100" variant="filled" value={block0100} />
+        <TextField style={{backgroundColor: `${backColor0101}`}} id="filled-basic" label="0101" variant="filled" value={block0101}/>
+        <TextField style={{backgroundColor: `${backColor0110}`}} id="filled-basic" label="0110" variant="filled" value={block0110}/>
+        <TextField style={{backgroundColor: `${backColor0111}`}} id="filled-basic" label="0111" variant="filled" value={block0111}/>
         <br></br>
-        <TextField id="filled-basic" label="1000" variant="filled" value={block1000} />
-        <TextField id="filled-basic" label="1001" variant="filled" value={block1001}/>
-        <TextField id="filled-basic" label="1010" variant="filled" value={block1010}/>
-        <TextField id="filled-basic" label="1011" variant="filled" value={block1011}/>
+        <TextField style={{backgroundColor: backColor1000 ? "#fc033d" : "#03fca5"}} id="filled-basic" label="1000" variant="filled" value={block1000} />
+        <TextField style={{backgroundColor: `${backColor1001}`}} id="filled-basic" label="1001" variant="filled" value={block1001}/>
+        <TextField style={{backgroundColor: `${backColor1010}`}} id="filled-basic" label="1010" variant="filled" value={block1010}/>
+        <TextField style={{backgroundColor: `${backColor1011}`}} id="filled-basic" label="1011" variant="filled" value={block1011}/>
         <br></br>
-        <TextField id="filled-basic" label="1100" variant="filled" value={block1100} />
-        <TextField id="filled-basic" label="1101" variant="filled" value={block1101}/>
-        <TextField id="filled-basic" label="1110" variant="filled" value={block1110}/>
-        <TextField id="filled-basic" label="1111" variant="filled" value={block1111}/>
+        <TextField style={{backgroundColor: `${backColor1100}`}} id="filled-basic" label="1100" variant="filled" value={block1100} />
+        <TextField style={{backgroundColor: `${backColor1101}`}} id="filled-basic" label="1101" variant="filled" value={block1101}/>
+        <TextField style={{backgroundColor: `${backColor1110}`}} id="filled-basic" label="1110" variant="filled" value={block1110}/>
+        <TextField style={{backgroundColor: `${backColor1111}`}} id="filled-basic" label="1111" variant="filled" value={block1111}/>
       </form>
     </div>
 
@@ -544,7 +544,7 @@ console.log("data1",data)
         <TextField style={{backgroundColor: backColor0100 ? "#fc033d" : "#03fca5"}} onChange={onDataChange} name="0100" id="filled-basic" label="0100" variant="filled" value={block0100} />
         <TextField style={{backgroundColor: `${backColor0101}`}} onChange={onDataChange} name="0101" id="filled-basic" label="0101" variant="filled" value={block0101}/>
         <TextField style={{backgroundColor: `${backColor0110}`}} onChange={onDataChange} name="0110" id="filled-basic" label="0110" variant="filled" value={block0110}/>
-        <TextField style={{backgroundColor: `${backColor0111}`}}onChange={onDataChange} name="0111" id="filled-basic" label="0111" variant="filled" value={block0111}/>
+        <TextField style={{backgroundColor: `${backColor0111}`}} onChange={onDataChange} name="0111" id="filled-basic" label="0111" variant="filled" value={block0111}/>
         <br></br>
         <TextField style={{backgroundColor: backColor1000 ? "#fc033d" : "#03fca5"}} onChange={onDataChange} name="1000" id="filled-basic" label="1000" variant="filled" value={block1000} />
         <TextField style={{backgroundColor: `${backColor1001}`}} onChange={onDataChange} name="1001" id="filled-basic" label="1001" variant="filled" value={block1001}/>
@@ -552,7 +552,7 @@ console.log("data1",data)
         <TextField style={{backgroundColor: `${backColor1011}`}} onChange={onDataChange} name="1011" id="filled-basic" label="1011" variant="filled" value={block1011}/>
         <br></br>
         <TextField style={{backgroundColor: `${backColor1100}`}} onChange={onDataChange} name="1100" id="filled-basic" label="1100" variant="filled" value={block1100} />
-        <TextField style={{backgroundColor: `${backColor1101}`}}onChange={onDataChange} name="1101" id="filled-basic" label="1101" variant="filled" value={block1101}/>
+        <TextField style={{backgroundColor: `${backColor1101}`}} onChange={onDataChange} name="1101" id="filled-basic" label="1101" variant="filled" value={block1101}/>
         <TextField style={{backgroundColor: `${backColor1110}`}} onChange={onDataChange} name="1110" id="filled-basic" label="1110" variant="filled" value={block1110}/>
         <TextField style={{backgroundColor: `${backColor1111}`}} onChange={onDataChange} name="1111" id="filled-basic" label="1111" variant="filled" value={block1111}/>
         <br></br>
