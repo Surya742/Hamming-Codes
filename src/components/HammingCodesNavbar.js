@@ -41,6 +41,9 @@ export default function MenuAppBar() {
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
           <a style={{textDecoration: "none" , color: "white"}} href="/">HAMMING CODES</a>
+          {window.screen.width >= 1536 ? <a href="/" style={{textDecoration: "none" , color: "black", display: "inline-block", marginLeft: "65rem", color: "white"}}><MenuItem onClick={handleClose}>Home</MenuItem></a> : ""}
+          {window.screen.width >= 1536 ?   <a href="/simulator" style={{textDecoration: "none" , color: "black", display: "inline-block", color: "white"}}><MenuItem onClick={handleClose}>Simulator</MenuItem></a> : ""}
+
           </Typography>
           {auth && (
             <div>
@@ -71,7 +74,8 @@ export default function MenuAppBar() {
                 <Router>
                 <a href="/" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Home</MenuItem></a>
                 <a href="/simulator" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Simulator</MenuItem></a>
-                <a href="/imagePlay" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Image</MenuItem></a>
+                {/* <a href="/particle" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Particle</MenuItem></a> */}
+                {/* <a href="/imagePlay" style={{textDecoration: "none" , color: "black"}}><MenuItem onClick={handleClose}>Image</MenuItem></a> */}
                 </Router>
               </Menu>
             </div>

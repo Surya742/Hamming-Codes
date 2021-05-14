@@ -6,6 +6,7 @@ import MenuAppBar from './HammingCodesNavbar';
 import AppBar from '@material-ui/core/AppBar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import PropTypes from 'prop-types';
+import ColorInfo from './ColorInfo';
 
 
 
@@ -593,7 +594,7 @@ console.log("data1",data)
         PROCESS DATA
       </Button>
       </form>
-
+      <ColorInfo />
       <h1>PROCESSED DATA</h1>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField style={{backgroundColor: backColor0000 ? "#fc033d" : "#03adfc"}} id="filled-basic" label="0000" variant="filled" value={block0000} />
@@ -616,12 +617,14 @@ console.log("data1",data)
         <TextField style={{backgroundColor: `${backColor1110}`}} id="filled-basic" label="1110" variant="filled" value={block1110}/>
         <TextField style={{backgroundColor: `${backColor1111}`}} id="filled-basic" label="1111" variant="filled" value={block1111}/>
       </form>
+      
     </div>
 
     {/* 2nd Part */}
     <div className={classes.bodyy2}>
       <h1 className={classes.heading}>ERROR DETECTION</h1>
       <h3 className={classes.heading2}>ALTERABLE DATA</h3>
+      
       <form onSubmit={onErrorSubmit} className={classes.root} noValidate autoComplete="off">
         <TextField style={{backgroundColor: backColor0000 ? "#fc033d" : "#03adfc"}} onChange={onDataChange} name="0000" id="filled-basic" label="0000" variant="filled" value={block0000} />
         <TextField style={{backgroundColor: backColor0001 ? "#fc033d" : "#03fca5"}} onChange={onDataChange} name="0001" id="filled-basic" label="0001" variant="filled" value={block0001}/>
@@ -644,6 +647,7 @@ console.log("data1",data)
         <TextField style={{backgroundColor: `${backColor1111}`}} onChange={onDataChange} name="1111" id="filled-basic" label="1111" variant="filled" value={block1111}/>
         <br></br>
         <br></br>
+        {/* <ColorInfo /> */}
       <Button className={classes.submitBtn} variant="outlined" type="submit" color="primary">
         DETECT
       </Button>
