@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     top: {
         marginLeft: "10%",
         display: "flex",
-        flexWrap: "wrap"
+        flexWrap: "wrap",
     },
 }));
 
@@ -61,7 +61,7 @@ export default function ColorInfo() {
             <List className={classes.root}>
                 
 
-                <ListItem role={undefined} dense button>
+                <ListItem role={undefined} dense >
                     <ListItemIcon>
                         <Checkbox
                             edge="start"
@@ -69,7 +69,7 @@ export default function ColorInfo() {
                             tabIndex={-1}
                             disableRipple
                             inputProps={{ 'aria-labelledby': 5 }}
-                            style={{color: "#fc033d"}}
+                            style={{color: "#fc033d", cursor: "default"}}
                         />
                     </ListItemIcon>
                     <ListItemText primary={`Error Bit`} />
@@ -78,7 +78,7 @@ export default function ColorInfo() {
 
 
             <List className={classes.root2}>
-                <ListItem role={undefined} dense button>
+                <ListItem role={undefined} dense >
                     <ListItemIcon>
                         <Checkbox
                             edge="start"
@@ -86,7 +86,7 @@ export default function ColorInfo() {
                             tabIndex={-1}
                             disableRipple
                             inputProps={{ 'aria-labelledby': 1 }}
-                            style={{color: "#03adfc"}}
+                            style={{color: "#03adfc", cursor: "default"}}
                         />
                     </ListItemIcon>
                     <ListItemText primary={`Overall Parity Bit`} />
@@ -94,7 +94,7 @@ export default function ColorInfo() {
             </List>
 
             <List className={classes.root3}>
-                <ListItem role={undefined} dense button>
+                <ListItem role={undefined} dense >
                     <ListItemIcon>
                         <Checkbox
                             edge="start"
@@ -103,7 +103,7 @@ export default function ColorInfo() {
                             tabIndex={-1}
                             disableRipple
                             inputProps={{ 'aria-labelledby': 1 }}
-                            style={{color: "#03fca5"}}
+                            style={{color: "#03fca5", cursor: "default"}}
                         />
                     </ListItemIcon>
                     <ListItemText primary={`Parity Bit`} />
@@ -111,7 +111,7 @@ export default function ColorInfo() {
             </List>
 
             <List className={classes.root4}>
-                <ListItem role={undefined} dense button>
+                <ListItem role={undefined} dense >
                     <ListItemIcon>
                         <Checkbox
                             edge="start"
@@ -119,7 +119,7 @@ export default function ColorInfo() {
                             tabIndex={-1}
                             disableRipple
                             inputProps={{ 'aria-labelledby': 1 }}
-                            style={{color: "#cacccf"}}
+                            style={{color: "#cacccf", cursor: "default"}}
                         />
                     </ListItemIcon>
                     <ListItemText primary={`Data Bit`} />

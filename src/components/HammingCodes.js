@@ -7,6 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import PropTypes from 'prop-types';
 import ColorInfo from './ColorInfo';
+import Particles from 'react-particles-js';
 
 
 
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bodyy: {
     textAlign: "center",
+    // marginTop: "20%",
   },
   bodyy2: {
     textAlign: "center",
@@ -532,10 +534,140 @@ console.log("data1",data)
 
   return (
     <div className={classes.top}>
+      
       <ElevationScroll {...props}>
         <MenuAppBar style={{position: "sticky"}} />
       </ElevationScroll>
+      {/* <Particles
+    style={{ position: "absolute",top: -150, zIndex: -2}}
+    params={{
+	    "fps_limit": 600,
+	    "particles": {
+            color: {
+                    value: "#000000"
+                    },
+	        "collisions": {
+	            "enable": false
+	        },
+	        "number": {
+	            "value": 115,
+	            "density": {
+	                "enable": false
+	            }
+	        },
+	        "line_linked": {
+	            "enable": true,
+	            "distance": 30,
+	            "opacity": 0.4,
+                "color": "#000000",
+	        },
+	        "move": {
+	            "speed": 1
+	        },
+	        "opacity": {
+	            "anim": {
+	                "enable": true,
+	                "opacity_min": 0.05,
+	                "speed": 1,
+	                "sync": false
+	            },
+	            "value": 0.4
+	        }
+	    },
+	    "polygon": {
+	        "enable": true,
+	        "scale": 0.3,
+	        "type": "inline",
+	        "move": {
+	            "radius": 10
+	        },
+	        "url": "http://127.0.0.1:5500/src/components/eg.svg",
+	        "inline": {
+	            "arrangement": "equidistant"
+	        },
+	        "draw": {
+	            "enable": true,
+	            "stroke": {
+	                "color": "rgba(0,0,0,.1)"
+	            }
+	        }
+	    },
+	    "retina_detect": false,
+	    "interactivity": {
+	        "events": {
+	            "onhover": {
+	                "enable": true,
+	                "mode": "bubble"
+	            }
+	        },
+	        "modes": {
+	            "bubble": {
+	                "size": 6,
+	                "distance": 40
+	            }
+	        }
+	    }
+	}} /> */}
 
+<Particles
+style={{ position: "absolute"}}
+    params={{
+	    "particles": {
+        color: {
+          value: "#037bfc"
+      },
+	        "number": {
+	            "value": 160,
+	            "density": {
+	                "enable": false
+	            }
+	        },
+	        "size": {
+	            "value": 3,
+	            "random": true,
+	            "anim": {
+	                "speed": 4,
+	                "size_min": 0.3
+	            }
+	        },
+	        "line_linked": {
+	            "enable": false,
+              color: {
+                value: "#000000"
+            }
+	        },
+	        "move": {
+	            "random": true,
+	            "speed": 1,
+	            "direction": "top",
+	            "out_mode": "out"
+	        }
+	    },
+	    "interactivity": {
+	        "events": {
+	            "onhover": {
+	                "enable": true,
+	                "mode": "bubble"
+	            },
+	            "onclick": {
+	                "enable": true,
+	                "mode": "repulse"
+	            }
+	        },
+	        "modes": {
+	            "bubble": {
+	                "distance": 250,
+	                "duration": 2,
+	                "size": 0,
+	                "opacity": 0
+	            },
+	            "repulse": {
+	                "distance": 400,
+	                "duration": 4
+	            }
+	        }
+	    }
+	}} />
     <div className={classes.bodyy}>
       <h1 className={classes.heading}>ENTER DATA</h1>
       <Button style={{margin: "2ch"}} onClick={() => {setVisiblity2("none");setVisiblity1("");emptyState()}} variant="contained" color="primary"> ENTER RAW DATA </Button>
@@ -622,6 +754,7 @@ console.log("data1",data)
 
     {/* 2nd Part */}
     <div className={classes.bodyy2}>
+      
       <h1 className={classes.heading}>ERROR DETECTION</h1>
       <h3 className={classes.heading2}>ALTERABLE DATA</h3>
       
@@ -654,6 +787,7 @@ console.log("data1",data)
       </form>
       <p>{result}</p>
     </div>
+    {/* </Particles> */}
     <AppBar style={{position: "absolute", top: "200%"}} />
     </div>
   );

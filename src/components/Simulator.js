@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 import SaveIcon from '@material-ui/icons/Save';
+import Particles from 'react-particles-js';
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -1588,6 +1589,34 @@ export default function Simulator(){
         download(JSON.stringify(jsonData), "json-file-name.json", "text/plain");
        }
     return <div style={{}}>
+        <Particles
+                    style={{position: "absolute", zIndex: -1}}
+                    params={{
+                        "particles": {
+                            color: {
+                                value: "#046bd9"
+                            },
+                            line_linked: {
+                                color: {
+                                    value: "#046bd9"
+                                }
+                            },
+                            "number": {
+                                "value": 50
+                            },
+                            "size": {
+                                "value": 3
+                            }
+                        },
+                        "interactivity": {
+                            "events": {
+                                "onhover": {
+                                    "enable": true,
+                                    "mode": "repulse"
+                                }
+                            }
+                        }
+                    }} />
         <HammingCodesNavbar />
         <div className={classes.center}>
         <h1>Simulator</h1>
@@ -1604,8 +1633,9 @@ export default function Simulator(){
                 Download
             </Button>
         </div>
-        <iframe style={{width: "98%", height: "40em", marginLeft: "1%"}} src="https://deepanshu-singhaniya.github.io/Hamming-Code-Circuit-Simulator/"></iframe>
+        <iframe style={{width: "98%", height: "88em", marginLeft: "1%"}} src="https://surya742.github.io/Logic-Circuit-Simulator/"></iframe>
         <div style={{padding: "5%"}}></div>
         </div>
 }
 // https://surya742.github.io/Logic-Circuit-Simulator/
+//https://deepanshu-singhaniya.github.io/Hamming-Code-Circuit-Simulator/

@@ -1,5 +1,16 @@
-# Project Demo
-![Project Demo](demo/demo.gif)
+# Project Shots
+![Project Demo 1](demo/1.png)
+![Project Demo 2](demo/2.png)
+![Project Demo 3](demo/3.png)
+![Project Demo 4](demo/4.png)
+![Project Demo 5](demo/5.png)
+![Project Demo 6](demo/6.png)
+![Project Demo 7](demo/7.png)
+![Project Demo 8](demo/8.png)
+![Project Demo 9](demo/9.png)
+![Project Demo 10](demo/10.png)
+![Project Demo 11](demo/11.png)
+![Project Demo 12](demo/12.png)
 
 
 # Open For The Contibution
