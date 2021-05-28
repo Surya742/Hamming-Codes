@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Hamming-Codes/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/Hamming-Codes/static/js/main.22aeca1f.chunk.js",
+    "main.js.map": "/Hamming-Codes/static/js/main.22aeca1f.chunk.js.map",
+    "runtime-main.js": "/Hamming-Codes/static/js/runtime-main.b88419af.js",
+    "runtime-main.js.map": "/Hamming-Codes/static/js/runtime-main.b88419af.js.map",
+    "static/js/2.b5daf486.chunk.js": "/Hamming-Codes/static/js/2.b5daf486.chunk.js",
+    "static/js/2.b5daf486.chunk.js.map": "/Hamming-Codes/static/js/2.b5daf486.chunk.js.map",
+    "static/js/3.5f245f25.chunk.js": "/Hamming-Codes/static/js/3.5f245f25.chunk.js",
+    "static/js/3.5f245f25.chunk.js.map": "/Hamming-Codes/static/js/3.5f245f25.chunk.js.map",
+    "index.html": "/Hamming-Codes/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/Hamming-Codes/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.b5daf486.chunk.js.LICENSE.txt": "/Hamming-Codes/static/js/2.b5daf486.chunk.js.LICENSE.txt",
+    "static/media/img.e90b6ba3.png": "/Hamming-Codes/static/media/img.e90b6ba3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b88419af.js",
+    "static/js/2.b5daf486.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.22aeca1f.chunk.js"
+  ]
+}
